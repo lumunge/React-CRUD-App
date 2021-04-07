@@ -28,12 +28,17 @@ function App() {
   // UPDATE
   const editBook = book => {
     setEdit(true)
-    setCurrentBook({ id:null, name:book.name, author:book.author, year:book.year })
+    setCurrentBook({ id:book.id, name:book.name, author:book.author, year:book.year })
   }
 
   const updateBook = (id, updatedBook) => {
     setEdit(false)
     setBooks(books.map(book => (book.id === id ? updatedBook : book )))
+  }
+
+  const deleteBook = id => {
+    setEdit(false);
+    setBooks(books.filter(book => book.id !== id))
   }
 
 
@@ -69,6 +74,7 @@ function App() {
           <Books
             books={books}
             editBook={editBook}
+            deleteBook={deleteBook}
           />
       </div>
       </div>

@@ -9,8 +9,8 @@ const Books = (props) => {
                 <th scope="col">Name</th>
                 <th scope="col">Author</th>
                 <th scope="col">Year</th>
-                <th scope="col">Actions</th>
-                <th scope="col">Actions2</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -32,7 +32,14 @@ const Books = (props) => {
                                 </button>
                             </td>
                             <td>
-                                <button className="btn btn-danger">Delete</button>
+                                <button
+                                    onClick={() => {
+                                        props.deleteBook(book.id)
+                                    }}
+                                    className="btn btn-danger"
+                                >
+                                Delete
+                                </button>
                             </td>
                         </tr>
                     ))
