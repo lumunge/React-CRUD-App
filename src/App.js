@@ -47,11 +47,13 @@ function App() {
     <div className="container">
       <div className="header">
         <h1>LIBRARY APP WITH REACT JS</h1>
+        <br/>
+        <br/>
       </div>
       <div className="row library">
       <div className="col-sm-6 add-book">
         {edit ? (
-          <Fragment>
+          <div>
               <h2>Edit Book</h2>
               <EditBook 
                 edit={edit}
@@ -59,14 +61,14 @@ function App() {
                 currentBook={currentBook}
                 updateBook={updateBook}
               />
-          </Fragment>
+          </div>
         ) : (
-          <Fragment>
-            <h4>Add A Book</h4>
+          <div>
+            <h1>Add A Book</h1>
               <Addbook
                 addBook={addBook}
             />
-          </Fragment>
+          </div>
         )}
       </div>
       <div className="col-sm-6 all-books">

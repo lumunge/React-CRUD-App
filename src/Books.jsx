@@ -5,15 +5,15 @@ const Books = (props) => {
         <table class="table">
             <thead>
                 <tr>
-                <th scope="col">id</th>
-                <th scope="col">Name</th>
-                <th scope="col">Author</th>
-                <th scope="col">Year</th>
-                <th scope="col">Edit</th>
-                <th scope="col">Delete</th>
+                <th className="text-primary">id</th>
+                <th className="text-primary">Name</th>
+                <th className="text-primary">Author</th>
+                <th className="text-primary">Year</th>
+                <th className="text-primary">Edit</th>
+                <th className="text-primary">Delete</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody className="text-light">
                 {props.books.length > 0 ? (
                     props.books.map(book => (
                         <tr key={book.id}>

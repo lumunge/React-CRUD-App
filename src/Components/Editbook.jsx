@@ -20,7 +20,7 @@ const EditBook = (props) => {
 
 
     return(
-        <form onSubmit={submitEditForm}>
+        <form onSubmit={submitEditForm} className="text-light font-weight-bold">
             <div className="form-group">
             <label for="">Name</label>
             <input type="text" className="form-control" name="name" placeholder="Book name" value={book.name} onChange={handleInput}/>

@@ -18,7 +18,7 @@ const Addbook = (props) => {
     }
 
     return(
-        <form onSubmit={submitBook}>
+        <form onSubmit={submitBook} className="text-light font-weight-bold">
             <div class="form-group">
             <label for="">Name</label>
             <input type="text" class="form-control" name="name" placeholder="Book name" value={book.name} onChange={handleInput}/>
