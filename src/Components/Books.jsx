@@ -2,7 +2,8 @@ import React from 'react';
 
 const Books = (props) => {
     return(
-        <table class="table">
+        <div className="table-responsive-sm">
+        <table className="table">
             <thead>
                 <tr>
                 <th className="text-primary">id</th>
@@ -23,7 +24,7 @@ const Books = (props) => {
                             <td>{book.year}</td>
                             <td>
                                 <button 
-                                    className="btn btn-primary"
+                                    className="btn btn-sm btn-primary"
                                     onClick={() => {
                                         props.editBook(book)
                                     }}
@@ -36,7 +37,7 @@ const Books = (props) => {
                                     onClick={() => {
                                         props.deleteBook(book.id)
                                     }}
-                                    className="btn btn-danger"
+                                    className="btn btn-sm btn-danger"
                                 >
                                 Delete
                                 </button>
@@ -50,6 +51,7 @@ const Books = (props) => {
                 )}
             </tbody>
         </table>
+        </div>
     )
 }
 

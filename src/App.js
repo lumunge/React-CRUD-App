@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './index.css';
-import Books from './Books';
+import Books from './Components/Books';
 import Addbook from './Components/Addbook';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import EditBook from './Components/Editbook';
@@ -70,7 +70,7 @@ function App() {
           </div>
         )}
       </div>
-      <div className="col-sm-6 all-books">
+      <div className="availableBooks">
         <h1>Available Books</h1>
           <Books
             books={books}
