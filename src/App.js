@@ -70,7 +70,7 @@ function App() {
           </div>
         )}
       </div>
-      <div className="availableBooks">
+      <div className="col-md-6">
         <h1>Available Books</h1>
           <Books
             books={books}
