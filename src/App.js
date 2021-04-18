@@ -7,35 +7,34 @@ import EditBook from './Components/Editbook';
 
 function App() {
 
+  // setting initial states
   const bookData = [
     { id: 1, name: 'Being and Nothingness', author: 'Jean-Paul Sartre', year: '1947'},
     { id: 2, name: 'A Happy Death', author: 'Albert Camus', year: '1933'}
   ]
-
   const formState = {id:null, name:'', author:'', year:''}
-
   const [books, setBooks] = useState(bookData);
   const [edit, setEdit] = useState(false);
   const [currentBook, setCurrentBook] = useState(formState);
 
   // CRUD OPERATIONS
-  // CREATE
+  // CREATE A BOOK
   const addBook = book => {
     book.id = books.length + 1;
     setBooks([...books, book]);
   }
 
-  // UPDATE
+  // EDIT A BOOK
   const editBook = book => {
     setEdit(true)
     setCurrentBook({ id:book.id, name:book.name, author:book.author, year:book.year })
   }
-
+  // UPDATE A BOOK
   const updateBook = (id, updatedBook) => {
     setEdit(false)
     setBooks(books.map(book => (book.id === id ? updatedBook : book )))
   }
-
+  // REMOVE A BOOK
   const deleteBook = id => {
     setEdit(false);
     setBooks(books.filter(book => book.id !== id))

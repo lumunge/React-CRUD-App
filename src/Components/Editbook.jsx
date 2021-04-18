@@ -2,17 +2,21 @@ import React, {useState, useEffect} from 'react';
 
 const EditBook = (props) => {
 
+    // setting initial states
     const [book, setBook] = useState(props.currentBook);
 
+    // effect hook to set setBook state to current selected book for editing
     useEffect(() => {
         setBook(props.currentBook)
     }, [props])
 
+    // getting edit form inputs and setting them as states for setBook
     const handleInput = (e) => {
         const {name, value} = e.target;
         setBook({ ...book, [name]:value })
     }
 
+    // handle edit form submission, update values in form
     const submitEditForm = (e) => {
         e.preventDefault();
         props.updateBook(book.id, book)

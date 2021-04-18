@@ -1,15 +1,23 @@
-import React, {useState} from 'react';
+import React, {Component, useState} from 'react';
 
 const Addbook = (props) => {
 
-    const formState = { id:null, name:'', author:'', year:''}
+    // setting inital states for Component
+    const formState = {
+         id:null, 
+         name:'', 
+         author:'', 
+         year:''
+        }
     const [book, setBook] = useState(formState);
 
+    // getting form inputs and setting them as states
     const handleInput = (e) => {
         const {name, value} = e.target;
         setBook({ ...book, [name]:value })
     }
 
+    // handle book form on submission
     const submitBook = (e) => {
         e.preventDefault();
         if(!book.name || !book.author || !book.year) return
