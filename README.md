@@ -2,8 +2,9 @@
 
 ### ABOUT
 
-This is a React Library App that utilized Create New Books, Read Stored Books,
-Update the books and Delete books from storage in reactjs using react hooks api.
+This is a React Library App that performs CRUD operations. It can Create New
+Books, Read Stored Books, Update the books and Delete books from storage in
+reactjs using react hooks api.
 
 ### TECHNOLOGIES USED:
 
