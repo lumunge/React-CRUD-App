@@ -9,8 +9,9 @@ function App() {
 
   // setting initial states
   const bookData = [
-    { id: 1, name: 'Being and Nothingness', author: 'Jean-Paul Sartre', year: '1947'},
-    { id: 2, name: 'A Happy Death', author: 'Albert Camus', year: '1933'}
+    { id: 1, name: 'Book 1', author: 'Author1', year: '1989'},
+    { id: 2, name: 'Book 2', author: 'Author 2', year: '2000'},
+    { id: 2, name: 'Book 3', author: 'Author 3', year: '2020'}
   ]
   const formState = {id:null, name:'', author:'', year:''}
   const [books, setBooks] = useState(bookData);
