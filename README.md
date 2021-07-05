@@ -26,10 +26,10 @@ reactjs using react hooks api.
 
 ### SETUP
 
-    * git clone https://github.com/lumungep12/React-CRUD-App.git
+    * git clone https://github.com/lumunge/React-CRUD-App.git
     * npm i
     * npm start
 
 ### HOSTED @
 
-[React-CRUD-App](https://lumungep12.github.io/React-CRUD-App/)
+[React-CRUD-App](https://lumunge.github.io/React-CRUD-App/)
